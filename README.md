@@ -1,6 +1,7 @@
 # Winds of Eternity
 
-A 2D top-down pixel action RPG targeting Godot 4.x and GDScript.
+A 2D top-down pixel action RPG targeting Godot 4.5.x and GDScript,
+using the Compatibility renderer on Windows PC.
 
 **Current status:** Milestone 0 — Repository Bootstrap.
 

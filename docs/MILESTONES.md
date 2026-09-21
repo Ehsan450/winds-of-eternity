@@ -22,7 +22,14 @@ for migration acceptance requirements.
 
 ## Milestone 1 — Godot Project Foundation
 
-Begin on a machine with the chosen Godot 4.x version available.
+Milestone 1A — static project bootstrap: **PREPARED**, not runtime validated.
+`project.godot` and the requested directory placeholders are prepared on the
+office PC. No scenes, scripts, gameplay input actions, or main scene are configured.
+**UNVERIFIED — REQUIRES GODOT RUNTIME VALIDATION.** Project import, renderer
+initialization, viewport scaling, texture filtering, and execution have not been
+validated in Godot. Continue editor/runtime work on a machine with the chosen
+Godot 4.5.x patch version available, using GDScript and the Compatibility renderer
+on Windows PC. Milestone 1 remains incomplete.
 
 - [ ] Create/open the Godot project.
 - [ ] Establish player movement and direction-aware animation.

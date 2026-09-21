@@ -1,5 +1,7 @@
 # Target Project Structure
 
+Development target: Godot 4.5.x, GDScript, Compatibility renderer, Windows PC.
+
 This document describes the **target structure, not the current structure**, from
 [PRD.md](../PRD.md), section 16. The repository currently contains bootstrap
 documentation and Git configuration; no Godot project exists yet.

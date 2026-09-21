@@ -18,8 +18,11 @@ OFFICE PC
 → only then clean the office PC
 
 No Git hosting provider or remote has been chosen/configured for this
-procedure. Choose the exact Godot 4.x version before project creation and
-record it in the repository so the personal PC can reproduce the environment.
+procedure. The development target is Godot 4.5.x with GDScript and the
+Compatibility renderer on Windows PC. Choose and record the exact 4.5.x patch
+version before the first personal-PC import/runtime validation so the environment
+can be reproduced. The `4.5` feature tag in `project.godot` identifies the engine
+series; it does not pin an exact patch release.
 Use repository-relative paths and keep credentials/tokens out of tracked files
 and remote URLs recorded in documentation.
 
@@ -44,7 +47,7 @@ all required assets are tracked. Check both before migration.
 - [ ] Install Git.
 - [ ] Clone the repository fresh from the chosen remote into a suitable local
   folder. Use Git history rather than copying hidden office-PC state.
-- [ ] Install the chosen Godot 4.x version on the personal PC.
+- [ ] Install the chosen Godot 4.5.x patch version on the personal PC.
 - [ ] Inspect the files and history using `git status`, `git log --oneline`, and
   `git ls-files`; compare the expected commit hash and required files/assets.
 - [ ] Once `project.godot` exists, open/import it in the chosen Godot version and

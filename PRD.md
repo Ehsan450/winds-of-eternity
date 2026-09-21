@@ -1,7 +1,8 @@
 # Winds of Eternity --- Product Requirements Document
 
 **Document status:** Initial development PRD\
-**Engine target:** Godot 4.x\
+**Engine target:** Godot 4.5.x\
+**Renderer target:** Compatibility\
 **Language:** GDScript\
 **Genre:** 2D top-down pixel action RPG\
 **Primary platform:** Windows PC\
@@ -706,7 +707,7 @@ Goal:
 
 ### Milestone 1 --- Godot Project Foundation
 
-Performed once development reaches a machine with Godot 4.x available.
+Performed once development reaches a machine with Godot 4.5.x available.
 
 Goal:
 
@@ -826,7 +827,7 @@ Therefore:
 
 ## 22. Git Requirements
 
-Repository should include an appropriate `.gitignore` for Godot 4.x.
+Repository should include an appropriate `.gitignore` for Godot 4.5.x.
 
 At minimum, do not commit:
 
@@ -960,7 +961,7 @@ Keeping these outside the initial scope is intentional.
 
 The first Codex session should receive the following instruction:
 
-> Read `PRD.md` completely. This repository is for a Godot 4.x 2D pixel
+> Read `PRD.md` completely. This repository is for a Godot 4.5.x 2D pixel
 > action RPG, but Godot is NOT installed on this temporary office PC. Do
 > not modify files yet. Inspect the repository and report what currently
 > exists, what is missing for Milestone 0, any conflicts with the PRD,
