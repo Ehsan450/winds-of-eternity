@@ -1,4 +1,4 @@
-; Milestone 1B: statically prepared movement test.
+; Statically prepared combat prototype.
 ; Development target: Godot 4.5.x / GDScript / Compatibility / Windows PC.
 ; UNVERIFIED — REQUIRES GODOT RUNTIME VALIDATION.
 config_version=5
@@ -6,7 +6,7 @@ config_version=5
 [application]
 
 config/name="Winds of Eternity"
-run/main_scene="res://world/MovementTest.tscn"
+run/main_scene="res://world/CombatTest.tscn"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 
 [display]
@@ -35,6 +35,15 @@ move_left={
 move_right={
 "deadzone": 0.5,
 "events": [Object(InputEventKey,"keycode":68), Object(InputEventKey,"keycode":4194321)]
+}
+
+attack={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"keycode":32)]
+}
+restart={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"keycode":82)]
 }
 
 [rendering]

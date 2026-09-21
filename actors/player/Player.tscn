@@ -1,19 +1,33 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=5 format=3]
 
 ; UNVERIFIED — REQUIRES GODOT RUNTIME VALIDATION.
 
 [ext_resource type="Script" path="res://actors/player/player.gd" id="1_player"]
+[ext_resource type="Texture2D" path="res://assets/characters/player_prototype.png" id="2_art"]
+[ext_resource type="Texture2D" path="res://assets/effects/wind_slash_prototype.png" id="3_slash"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_player"]
-size = Vector2(16, 16)
+size = Vector2(16, 18)
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+collision_layer = 2
+collision_mask = 5
 motion_mode = 1
 script = ExtResource("1_player")
 
-[node name="Placeholder" type="Polygon2D" parent="."]
-polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-color = Color(0.3, 0.85, 1, 1)
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_art")
+hframes = 2
+vframes = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_player")
+
+[node name="Attack" type="Node2D" parent="."]
+visible = false
+z_index = 1
+
+[node name="WindSlash" type="Sprite2D" parent="Attack"]
+texture_filter = 1
+texture = ExtResource("3_slash")

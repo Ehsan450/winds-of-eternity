@@ -1,0 +1,89 @@
+[gd_scene load_steps=6 format=3]
+
+; UNVERIFIED — REQUIRES GODOT RUNTIME VALIDATION.
+
+[ext_resource type="Script" path="res://world/combat_test.gd" id="1_test"]
+[ext_resource type="PackedScene" path="res://actors/player/Player.tscn" id="2_player"]
+[ext_resource type="PackedScene" path="res://actors/enemies/BasicEnemy.tscn" id="3_enemy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_horizontal"]
+size = Vector2(592, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vertical"]
+size = Vector2(16, 256)
+
+[node name="CombatTest" type="Node2D"]
+script = ExtResource("1_test")
+
+[node name="Boundaries" type="StaticBody2D" parent="."]
+collision_layer = 1
+collision_mask = 0
+
+[node name="Top" type="CollisionShape2D" parent="Boundaries"]
+position = Vector2(320, 72)
+shape = SubResource("RectangleShape2D_horizontal")
+
+[node name="Bottom" type="CollisionShape2D" parent="Boundaries"]
+position = Vector2(320, 328)
+shape = SubResource("RectangleShape2D_horizontal")
+
+[node name="Left" type="CollisionShape2D" parent="Boundaries"]
+position = Vector2(32, 200)
+shape = SubResource("RectangleShape2D_vertical")
+
+[node name="Right" type="CollisionShape2D" parent="Boundaries"]
+position = Vector2(608, 200)
+shape = SubResource("RectangleShape2D_vertical")
+
+[node name="Player" parent="." instance=ExtResource("2_player")]
+position = Vector2(180, 200)
+
+[node name="BasicEnemy" parent="." instance=ExtResource("3_enemy")]
+position = Vector2(460, 200)
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="Title" type="Label" parent="HUD"]
+offset_left = 24.0
+offset_top = 5.0
+offset_right = 616.0
+offset_bottom = 27.0
+theme_override_colors/font_color = Color(0.75, 0.95, 0.9, 1)
+theme_override_font_sizes/font_size = 16
+text = "WINDS OF ETERNITY  /  WIND TRIAL"
+
+[node name="PlayerHP" type="Label" parent="HUD"]
+offset_left = 24.0
+offset_top = 30.0
+offset_right = 280.0
+offset_bottom = 52.0
+theme_override_font_sizes/font_size = 14
+text = "HERO"
+
+[node name="EnemyHP" type="Label" parent="HUD"]
+offset_left = 360.0
+offset_top = 30.0
+offset_right = 616.0
+offset_bottom = 52.0
+theme_override_colors/font_color = Color(1, 0.7, 0.65, 1)
+theme_override_font_sizes/font_size = 14
+text = "BOG IMP"
+horizontal_alignment = 2
+
+[node name="Status" type="Label" parent="HUD"]
+offset_left = 48.0
+offset_top = 90.0
+offset_right = 592.0
+offset_bottom = 116.0
+theme_override_font_sizes/font_size = 14
+text = "Face the creature. Time your Wind slash."
+horizontal_alignment = 1
+
+[node name="Controls" type="Label" parent="HUD"]
+offset_left = 24.0
+offset_top = 336.0
+offset_right = 616.0
+offset_bottom = 360.0
+theme_override_font_sizes/font_size = 13
+text = "WASD / Arrows: move     Space: Wind slash     R: restart"
+horizontal_alignment = 1
