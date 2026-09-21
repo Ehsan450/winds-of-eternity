@@ -1,0 +1,43 @@
+# Godot generated cache and local export credentials
+.godot/
+.godot.export_credentials
+export_credentials.cfg
+
+# Generated build/export output (keep source assets outside these folders)
+/build/
+/builds/
+/dist/
+/export/
+/exports/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+
+# OS and local editor files
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+*.code-workspace
+
+# Environment secrets and local credentials
+.env
+.env.*
+!.env.example
+!.env.sample
+/.secrets/
+/secrets/
+/.credentials/
+credentials.json
+credentials.local.*
+*.key
+*.pem
+*.p12
+*.pfx
+*.keystore
